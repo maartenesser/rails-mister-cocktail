@@ -1,0 +1,14 @@
+<div class="container">
+  <h1><%= @cocktail.name %></h1>
+  <ul class="list-unstyled">
+    <% @cocktail.doses.each do |dose| %>
+      <li class="mt-2 list-group-item">
+        <%= dose.description %>
+        <%= dose.ingredient.name %>
+        <%= link_to 'Destroy',  cocktail_dose_path(@cocktail, dose),
+    data: { confirm: 'Are you sure?' }, method: :delete %>
+      </li>
+    <% end %>
+  </ul>
+  <%=  link_to "add Dose", new_cocktail_dose_path(@cocktail)%> | <%= link_to "Go back", cocktails_path %>
+</div>
