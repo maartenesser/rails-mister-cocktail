@@ -5,7 +5,7 @@
       <li class="mt-2 list-group-item">
         <%= dose.description %>
         <%= dose.ingredient.name %>
-        <%= link_to 'Destroy',  cocktail_dose_path(@cocktail, dose),
+        <%= link_to 'Destroy',  dose_path(dose),
     data: { confirm: 'Are you sure?' }, method: :delete %>
       </li>
     <% end %>

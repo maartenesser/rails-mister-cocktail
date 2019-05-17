@@ -6,6 +6,7 @@ require 'open-uri'
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Dose.delete_all
 Ingredient.delete_all
 
 url = "https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list"
